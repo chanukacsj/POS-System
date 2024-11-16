@@ -13,7 +13,7 @@
   color: green;
   font-weight: bold;
 }
-.card-container{
+.order-card-container{
     display: flex;
     grid-template-columns: 6fr 6fr 13fr;
     column-gap: 12px;
@@ -38,24 +38,11 @@
   margin-top: 1rem;
   /* margin-bottom: 2rem; */
 }
-.customer-body{
+/* .customer-body{
  width: 100%;
  height: 100%;
-}
-.box{
-    /* cursor: pointer; */
-    height: 150px;
-    width: 450px;
-    border-radius: 2px;
-    background-color: white;
-    box-shadow: 0px 0px  2px black;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    margin-top: 20px;
-    margin-left: 7rem;
-    
-}
+} */
+
 .card-header{
   height: 35px;
   width: 100%;
@@ -71,12 +58,12 @@
     margin-left: -3px;
     width: 324px;
 }
-.btn-danger{
-margin-left: 17rem;
+.btn-item{
+margin-left: 25rem;
     
 }
-.btn-success{
- margin-left: 17rem;
+.btn-purchase {
+ margin-left: 25rem;
           
 }
 .delete{
@@ -149,8 +136,8 @@ margin-left: 17rem;
       margin-right: 1rem;
 }
 .invoice-details{
-        width: 27rem;
-        height: 25rem;
+        width: 35rem;
+        height: 35rem;
         
 }
 
@@ -190,7 +177,7 @@ margin-left: 17rem;
         margin-top: 2rem;
     }
     
-    .card-container{
+    .order-card-container{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -209,12 +196,12 @@ margin-left: 17rem;
    .box{
     margin-left: 0;
    }
-   .btn-danger{
-      margin-left: 15rem;
+   .btn-item{
+      margin-left: 18rem;
           
     }
-    .btn-success{
-      margin-left: 15rem;
+    .btn-purchase{
+      margin-left: 18rem;
           
     }
 }
@@ -223,7 +210,7 @@ margin-left: 17rem;
         margin-left: 0rem;
         margin-top: 0;
     }
-    .card-container{
+    .order-card-container{
         width: 100%;
         
     } 
@@ -248,10 +235,10 @@ margin-left: 17rem;
     .update-customer{
      width: 100%;
     }
-    .btn-danger{
+    .btn-item{
       margin-left: 11rem; 
     }
-    .btn-success{
+    .btn-purchase{
       margin-left: 11rem;
           
     }
@@ -296,15 +283,16 @@ margin-left: 17rem;
     .card-container{
         width: 100%;
     }
-    .btn-danger{
+    .btn-item{
       margin-left: 8.5rem;  
     }
-    .btn-success{
+    .btn-purchase{
       margin-left: 8.5rem;
           
     }
     .invoice-details{
-      height: 26rem;
+      width: 27rem;
+      height: 39rem;  
     }
     /* .table-container{
       margin-right: 1rem;
@@ -346,18 +334,22 @@ margin-left: 17rem;
     .input-search{
         margin-left: 0;
     }
-    .card-container{
+    .order-card-container{
         width: 100%;
         display: flex;
         justify-content: center;
     }
-    .btn-danger{
+    .btn-item{
       margin-left: 8.5rem;
           
     }
-    .btn-success{
+    .btn-purchase{
       margin-left: 8.5rem;
           
+    }
+    .invoice-details{
+      width: 27rem;
+      height: 39rem;  
     }
 }
 

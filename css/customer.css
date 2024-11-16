@@ -1,4 +1,5 @@
-.box:hover{
+
+.box-customer:hover{
     color:rgb(38, 158, 38);
     font-weight: bolder;
     box-shadow: 2px 2px  10px black;
@@ -13,7 +14,7 @@
   color: green;
   font-weight: bold;
 }
-.card-container{
+.customer-card-container{
    display: flex;
     grid-template-columns: 6fr 6fr 13fr;
     column-gap: 12px;
@@ -30,9 +31,9 @@
  width: 100%;
  height: 100%;
 }
-.box{
+.box-customer{
     /* cursor: pointer; */
-    height: 150px;
+    height: 180px;
     width: 450px;
     border-radius: 2px;
     background-color: white;
@@ -42,6 +43,7 @@
     align-items: center; */
     margin-top: 20px;
     margin-left: 7rem;
+    margin-left: 2rem;
     
 }
 .card-header{
@@ -59,9 +61,7 @@
     margin-left: -3px;
     width: 324px;
 }
-.btn-danger{
-    height: 30px;
-}
+
 .delete{
     margin-top: 10px;
     margin-right: 10px;
@@ -131,6 +131,34 @@
 .table-container{
       margin-right: 1rem;
     }
+.customer-details{
+
+    width: 100%;
+    }
+.right-side-buttons-customer{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+.right-side-buttons-customer button{
+        height: 40px;
+        width: 100px;
+        margin-right: 1rem;
+        color: white;
+        
+        
+    }
+    .right-side-buttons-customer button:hover{
+        box-shadow: 2px 2px  10px black;
+        color: black;
+        font-weight: bolder;
+        background-color: white;
+        
+    }
+   
+    
+     
 
     @media screen and (min-width:768px) and (max-width:1024px){
   .button-group{
@@ -144,11 +172,11 @@
     margin-top: 2rem;
     width: 50%;
   }
-  .box{
-    margin-left: 2rem;
-  }
   .update-customer{
      width: 100%;
+ }
+ .customer-container{
+    height: 149vh;
  }
  /* .table-container{
       margin-right: 1rem;
@@ -168,7 +196,7 @@
         margin-top: 2rem;
     }
     
-    .card-container{
+    .customer-card-container{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -184,19 +212,22 @@
     position: relative;
     right: 0;
    }
-   .box{
+   .box-customer{
     margin-left: 0;
    }
+   .customer-container{
+    height: 138vh;
+ }
    /* .table-container{
       margin-right: 1rem;
     } */
 }
 @media screen and (min-width:375px) and (max-width:426px){
-    .box{
+    .box-customer{
         margin-left: 0rem;
         margin-top: 0;
     }
-    .card-container{
+    .customer-card-container{
         width: 100%;
         
     } 
@@ -226,7 +257,7 @@
     } */
 }
 @media screen and (min-width:0px) and (max-width:320px){
-  .box{
+  .box-customer{
     width:290px;
     margin-left: 0rem;
   }
@@ -261,15 +292,27 @@
     .input-search{
         margin-left: 0;
     }
-    .card-container{
+    .customer-card-container{
         width: 100%;
+    }
+    .right-side-buttons-customer{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+    .card-body .row{
+        display: flex;
+        flex-direction: column;
     }
     /* .table-container{
       margin-right: 1rem;
     } */
 }
 @media screen and (min-width:320px) and (max-width:375px){
-    .box{
+    .box-customer{
     width:290px;
     margin-left: 0rem;
   }
@@ -304,10 +347,25 @@
     .input-search{
         margin-left: 0;
     }
-    .card-container{
+    .customer-card-container{
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+    .customer-container{
+        height: 133vh;
+    }
+    .right-side-buttons-customer{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+    .card-body .row{
+        display: flex;
+        flex-direction: column;
     }
 }
 
