@@ -90,12 +90,13 @@ $("#itbtn").on("click", function () {
                 title: "Item save successfully"
             });
             function itemCount() {
-                let itemCount = 0;
                 
-                 itemCount = item_arr.length;
-                $('#totalItems').append(itemCount);
+               let  itemCount = item_arr.length;
+               $('#totalItems').empty();
+               $('#totalItems').append(itemCount);
                 
             }
+          
 
             cleanItemForm();
             loadItems();

@@ -88,12 +88,16 @@ $("#cusbtn").on("click", function () {
                 title: "Customer save successfully"
             });
             function customerCount() {
-                let customerCount = 0;
                 
-                 customerCount = customer_arr.length;
+                let customerCount = customer_arr.length;
+            
+              
+                $('#totalCustomers').empty();
+            
+               
                 $('#totalCustomers').append(customerCount);
-                
-            }   
+            }
+               
             loadCustomerTable();
             loadCustomers();
             cleanCustomerForm();

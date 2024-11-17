@@ -106,10 +106,44 @@ $('#orSaveBtn').on('click', function () {
         subtotal
     };
 
-    $('#subtotal').append(subtotal);
+   
+    function updateSubtotal(subtotal) {
+        // Ensure subtotal is calculated and passed correctly
+        if (typeof subtotal !== 'number' || isNaN(subtotal)) {
+            console.error('Invalid subtotal value');
+            return;
+        }
+    
+        // Clear any previous content in #subtotal
+        $('#subtotal').empty();
+    
+        // Append the formatted subtotal to the element
+        $('#subtotal').append(`$${subtotal.toFixed(2)}`);
+    }
+    function totalSales() {
+        // Ensure cart_arr exists and contains data
+        for(let i = 0; i < cart_arr.length; i++) {
+            if (typeof cart_arr[i].total !== 'number' || isNaN(cart_arr[i].total)) {
+                console.error('Invalid total value in cart_arr');
+                return;
+            }
+        }
+    
+        // Calculate the total sales
+        let totalSales = cart_arr.reduce((sum, item) => sum + (item.total || 0), 0); // Safeguard for missing item.total
+    
+        // Update the DOM element
+        $('#totalSales').empty(); // Clear previous content
+        $('#totalSales').append(`$${totalSales.toFixed(2)}`); // Append formatted sales value
+    }
+    
+    
+
     cart_arr.push(cart_item);
     loadCartTable();
     updateItemArray();
+    updateSubtotal(subtotal);
+    totalSales();
     clearItemInputs();
 });
 
@@ -146,6 +180,7 @@ $("#order_btn").on('click', function () {
     cart_arr.forEach(item => {
         let orderDetail = new OrderDetailModel(order_id, item.item_code, item.qty, item.unit_price);
         orderDetail_arr.push(orderDetail);
+        orderCount();
     });
 
     Swal.fire({
@@ -155,6 +190,13 @@ $("#order_btn").on('click', function () {
         showConfirmButton: false,
         timer: 1500
     });
+    function orderCount() {
+                
+        let  orderCount = order_arr.length;
+        $('#totalOrders').empty();
+        $('#totalOrders').append(orderCount);
+         
+     }
 
     clearOrderForm();
 });

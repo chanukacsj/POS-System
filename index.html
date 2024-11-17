@@ -18,16 +18,17 @@
 
   <body>
    <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bold text-success fs-3" href="#">Pos System</a>
+
+          <a class="navbar-brand fw-bold text-success fs-3" href="#"><img src="/asset/icons/pos-system-high-resolution-logo-transparent.png" alt="" width="170px" height="50px"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active " aria-current="page" href="#">Home</a>
+                <a class="nav-link " aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link " href="#customer-section">Customers</a>
@@ -40,8 +41,10 @@
               </li>
              
             </ul>
-            <span class="navbar-text">
-             
+            <span class="navbar-text d-flex me-4"> 
+              <a class="nav-link fw-bold ms-2 mt-1 logout" href="/login.html">
+                <img src="asset/icons/icons8-emergency-exit-96.png" alt="" width="35px" height="35px">
+              </a>
             </span>
           </div>
         </div>
@@ -51,34 +54,34 @@
     <div class="container dashboard-container">
         <div class="d-flex  border-bottom border-black line1">
             <i class="fa fa-home fs-5 m-1 me-3" aria-hidden="true"></i>
-        <h4 class="fw-light">Dashboard</h4>
+        <h4 class="fw-bold text-success ">Dashboard</h4>
         </div>
-        <div class="card-container bg-body-tertiary">
-          <div class="box ">
-            <div class="card-body d-flex">
-              <div class="ms-3">
+        <div class="card-container ">
+          <div class="box bg-body-tertiary">
+            <div class="card-body d-flex ">
+              <div class="ms-4 ">
                 <h5 class="card-title text-center fw-bolder font-monospace" id="totalCustomers">0</h5>
                 <p class="card-text fw-bolder font-monospace">Customers</p>
               </div>
-                <img class="box-img" src="asset/icons/icons8-customers-100.png" alt="">
+                <img class="box-img" src="asset/icons/icons8-crowd-80.png" alt="">
             </div>
           </div>
           <div class="box bg-body-tertiary">
             <div class="card-body d-flex">
-              <div class="ms-3">
-                <h5 class="card-title text-center fw-bolder font-monospace">10 </h5>
+              <div class="ms-4">
+                <h5 class="card-title text-center fw-bolder font-monospace" id="totalItems">0 </h5>
                 <p class="card-text fw-bolder font-monospace">Items</p>
               </div>
-                <img class="box-img" src="asset/icons/icons8-item-100.png" alt="">
+                <img class="box-img" src="asset/icons/icons8-open-box-100.png" alt="">
             </div>
           </div>
           <div class="box bg-body-tertiary">
             <div class="card-body d-flex">
-              <div class="ms-3">
-                <h5 class="card-title text-center fw-bolder font-monospace">10 </h5>
+              <div class="ms-4">
+                <h5 class="card-title text-center fw-bolder font-monospace" id="totalOrders">0 </h5>
                 <p class="card-text fw-bolder font-monospace">Orders</p>
               </div>
-                <img class="box-img" src="asset/icons/icons8-order-100 (1).png" alt="">
+                <img class="box-img" src="asset/icons/icons8-purchase-order-96.png" alt="">
             </div>
           </div>
           <div class="box Report bg-body-tertiary">
@@ -91,7 +94,7 @@
                     <tbody>
                       <tr>
                         <th scope="row">Total Sales</th>
-                        <td>5679</td>
+                        <td id="totalSales">0</td>
                       </tr>
                     </tbody>
                   </table>
@@ -108,7 +111,7 @@
                 <div class="ms-3">
                   <!-- <h5 class="card-title text-center fw-bolder font-monospace">10 </h5> -->
                 </div>
-                  <img class="shotcut-img" src="asset/icons/icons8-add-administrator-100.png" alt="">
+                  <img class="shotcut-img" src="asset/icons/icons8-add-user-male-skin-type-7-96.png" alt="Add New Customer">
                   <p class="card-text fw-bolder font-monospace card-c">Add New Customer</p>
               </div>
             </div>
@@ -118,7 +121,7 @@
                 <div class="ms-3">
                   <!-- <h5 class="card-title text-center fw-bolder font-monospace">10 </h5> -->
                 </div>
-                  <img class="shotcut-img" src="asset/icons/icons8-plus-100.png" alt="">
+                  <img class="shotcut-img" src="asset/icons/icons8-plus-48.png" alt="Add New Item ">
                   <p class="card-text fw-bolder font-monospace card-i">Add New Item</p>
 
               </div>
@@ -129,7 +132,7 @@
                 <div class="ms-3">
                   <!-- <h5 class="card-title text-center fw-bolder font-monospace">10 </h5> -->
                 </div>
-                  <img class="shotcut-img" src="asset/icons/icons8-create-order-100.png" alt="">
+                  <img class="shotcut-img" src="asset/icons/icons8-create-order-96.png" alt=" Add New Order">
                   <p class="card-text fw-bolder font-monospace card-o">Add New Order</p>
 
               </div>
@@ -144,7 +147,7 @@
     <div class="container customer-container">
         <div class="d-flex  border-bottom border-black line1">
             <i class="fa fa-users fs-5 m-1 me-3" aria-hidden="true"></i>
-        <h4 class="fw-light">Customer</h4>
+        <h4 class="fw-bold text-success">Customer</h4>
         </div>
         <div class="customer-body bg-body-tertiary">
             <div class="d-flex flex-wrap card-button">
@@ -223,7 +226,7 @@
     <div class="container item-container">
       <div class="d-flex  border-bottom border-black line1">
           <img src="/asset/icons/icons8-item-100.png" alt="" width="25px" height="25px">
-      <h4 class="fw-light ms-2">Items</h4>
+      <h4 class="fw-bold text-success ms-2">Items</h4>
       </div>
       <div class="customer-body bg-body-tertiary">
           <div class="d-flex flex-wrap card-button">
@@ -301,7 +304,7 @@
     <div class="container">
         <div class="d-flex  border-bottom border-black line1">
           <img src="/asset/icons/icons8-item-100.png" alt="" width="25px" height="25px">
-          <h4 class="fw-light ms-2">Orders</h4>
+          <h4 class="fw-bold text-success ms-2">Orders</h4>
         </div>
         <div class="customer-body bg-body-tertiary">
             <div class="order-card-container">

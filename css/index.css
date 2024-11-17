@@ -7,12 +7,35 @@
         transform: scale(1.1);
     }
 }
+
+.navbar{
+  border-bottom: 3px solid green;
+}
+.navbar-nav{
+  margin-left: 2rem;
+}
+
+.nav-item{
+  margin-left: 1.5rem;
+  font-size: large;
+  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  
+}
 .Report:hover{
   color: red;
 }
 .nav-link:hover{
   color: green;
   font-weight: bold;
+  
+  
+}
+.logout:hover{
+  img{
+    transform: scale(1.1);
+  }
 }
 .box{
     cursor: pointer;
