@@ -6,6 +6,9 @@
         transform: scale(1.1);
     }
 }
+.order-section{
+    padding-top: 5rem;
+}
 .Report:hover{
   color: red;
 }
